@@ -14,10 +14,10 @@ $ composer require dongdavid/excel -vvv
 ### 导入数据  
 
 ```php
-
-```
 \Dongdavid\Excel\QuickStart::getExcelRow($filename); // 获取当前sheet的行数
 \Dongdavid\Excel\QuickStart::importByLimit($filename,$startRow,$endRow);
+```
+
 
 ```php
 // 读完后会自动释放内存
