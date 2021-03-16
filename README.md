@@ -14,6 +14,12 @@ $ composer require dongdavid/excel -vvv
 ### 导入数据  
 
 ```php
+
+```
+\Dongdavid\Excel\QuickStart::getExcelRow($filename); // 获取当前sheet的行数
+\Dongdavid\Excel\QuickStart::importByLimit($filename,$startRow,$endRow);
+
+```php
 // 读完后会自动释放内存
 // 10万条数据 一次1000条 读一次要4秒， 14MB内存 全部读完要7分钟， 总消耗内存在40MB左右
 // 10万条数据 一次3000条 读一次5秒 14MB 
