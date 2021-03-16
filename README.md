@@ -80,8 +80,8 @@ $col = 10; //列数
 $sheetName = 'Sheet1'; //非必填 默认为Sheet1
 $excel = new \Dongdavid\Excel\Excel();
 $excel->init(false);
-$excel->setTitle(['表头1','表头2','表头3','表头4']);
-$excel->setFormate(['表头1'=>'string','表头2'=>'0.00%','表头3'=>'string','表头4'=>'0.0']); // 设置所有列为文本格式
+//$excel->setTitle(['表头1','表头2','表头3','表头4']);
+$excel->setTitle(['表头1'=>'string','表头2'=>'0.00%','表头3'=>'string','表头4'=>'0.0']); // 设置不同列的格式
 foreach($rows as $row){
     $excel->writeRow($row,$sheetName);
 }

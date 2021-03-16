@@ -62,13 +62,7 @@ class Excel
      * @param  int  $len 列数
      * @example ['string','integer','0','0.00','0%','0.00%','dollar','euro','date','datetime','YYYY-MM-DD','D-MMM-YYYY HH:MM AM/PM','HH:MM:SS']
      */
-    public function setFormate($formate = [],$len = 0){
-        if (empty($formate)){
-            if ($len === 0){
-                $len = count($this->title);
-            }
-            $formate = array_fill(0,$len,'string');
-        }
+    public function setFormate($formate = []){
         $this->writer->writeSheetHeader('Sheet1',$formate);
     }
     /**

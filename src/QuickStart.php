@@ -54,9 +54,8 @@ class QuickStart
         $excel = new Excel();
         try {
             $excel->init(false);
-            if (!empty($title)){
-                $excel->setTitle($title);
-            }else{
+            if (empty($title))
+            {
                 $title = $data[0];
                 unset($data[0]);
             }
